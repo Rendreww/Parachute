@@ -1,0 +1,13 @@
+ Private Sub hitboxDetection(sender As Object, e As EventArgs) Handles para.Move
+        If para.Top > 950 Then 'change value later after testing
+            If para.Left >= boat.Left And para.Left <= (boat.Left + 100) Then
+                score.Text = score.Text + 1
+            Else
+                'play animation --> need to create a function for this
+                lives.Text = lives.Text - 1
+            End If
+            para.Hide() 'temporary solution, need to find a way to get rid off para to reduce lag as game goes on
+        Else
+            fillerLabel.Text = "working" 'testing
+        End If
+    End Sub
