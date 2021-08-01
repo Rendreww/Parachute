@@ -1,0 +1,9 @@
+   Private Sub horiMove(sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
+        Select Case e.KeyCode
+            Case Keys.Left
+                para.Left = para.Left - 50
+            Case Keys.Right
+                para.Left = para.Left + 50
+        End Select
+    End Sub
+End Class
